@@ -92,7 +92,7 @@ public class PostController {
 
     @PostConstruct
     public void init() {
-        log.info("[Initializing PostController]");
+        log.info("[Init POST]");
 
         postService.save(new Post( "titleA", "contentA"));
         postService.save(new Post("titleB", "contentB"));

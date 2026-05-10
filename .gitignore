@@ -1,10 +1,20 @@
+### Help ###
 HELP.md
-.gradle
+
+### Gradle ###
+.gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
 
+### Java ###
+*.class
+
+### Logs ###
+*.log
+logs/
+
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -13,8 +23,37 @@ out/
 ### VS Code ###
 .vscode/
 
+### Eclipse ###
+.project
+.classpath
+.settings/
+
 ### Mac ###
 .DS_Store
 
-### Logs ###
-*.log
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+### Local environment ###
+.env
+.env.*
+!.env.example
+
+### Spring local config ###
+src/main/resources/application-local.properties
+src/main/resources/application-dev.properties
+src/main/resources/application-prod.properties
+
+### Sensitive config ###
+*.key
+*.pem
+*.p12
+*.jks
+
+### Temporary files ###
+*.tmp
+*.temp
+*.swp
+*.swo

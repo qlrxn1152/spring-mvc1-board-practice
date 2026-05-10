@@ -94,8 +94,8 @@ public class PostController {
     public void init() {
         log.info("[Initializing PostController]");
 
-        postService.save(new Post( "titleA", "hello"));
-        postService.save(new Post("titleB", "bye"));
+        postService.save(new Post( "titleA", "contentA"));
+        postService.save(new Post("titleB", "contentB"));
     }
 
 }

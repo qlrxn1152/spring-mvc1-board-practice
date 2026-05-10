@@ -53,5 +53,11 @@ src/main/java/com/example/mvcboard
  │    └── PostController.java
  ├── domain
  │    └── Post.java
+ ├── service
+ │    └── impl
+   │    └── PostServiceImpl.java
+ │    └── PostService.java
  └── repository
-      └── PostRepository.java
+ │    └── impl
+ │      └── PostRepositoryImpl.java
+ │    └── PostRepository.java

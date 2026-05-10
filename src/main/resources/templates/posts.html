@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 목록</title>
+</head>
+<body>
+
+<h1>게시글 목록</h1>
+
+<div th:if="${param.deleteStatus}">
+    <p>게시글이 삭제되었습니다.</p>
+</div>
+
+<div>
+    <a href="/posts/new">게시글 작성</a>
+</div>
+
+<hr>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>제목</th>
+        <th>내용</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="post : ${posts}">
+        <td th:text="${post.postId}">1</td>
+        <td>
+            <a th:href="@{/posts/{postId}(postId=${post.postId})}"
+               th:text="${post.title}">
+                제목
+            </a>
+        </td>
+        <td th:text="${post.content}">내용</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

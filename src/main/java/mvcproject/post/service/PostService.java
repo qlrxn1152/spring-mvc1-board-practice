@@ -15,4 +15,6 @@ public interface PostService {
 
     void delete(Long deletePostId);
 
+    void viewPost(Long postId);
+
 }

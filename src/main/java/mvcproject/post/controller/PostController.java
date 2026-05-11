@@ -35,7 +35,10 @@ public class PostController {
     @GetMapping("/posts/{postId}")
     public String postView(@PathVariable Long postId, Model model) {
         log.info("Finding PostId = {}", postId);
+
         Post findPost = postService.findById(postId);
+        postService.viewPost(postId); // 조회수 증가
+
         model.addAttribute("post", findPost);
 
         return "post";
@@ -94,7 +97,7 @@ public class PostController {
     public void init() {
         log.info("[Init POST]");
 
-        postService.save(new Post( "titleA", "contentA"));
+        postService.save(new Post("titleA", "contentA"));
         postService.save(new Post("titleB", "contentB"));
     }
 

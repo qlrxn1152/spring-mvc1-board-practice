@@ -14,7 +14,6 @@ public class Post {
     private String title;
     private String content;
     private int viewCount; // 초기값 = 0 설정!
-
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 

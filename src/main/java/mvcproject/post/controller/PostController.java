@@ -29,6 +29,10 @@ public class PostController {
 
         model.addAttribute("posts", posts);
 
+        for (Post post : posts) {
+            log.info("post = {}", post);
+        }
+
         return "posts";
     }
 

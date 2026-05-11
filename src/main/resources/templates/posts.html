@@ -29,20 +29,33 @@
                 <th>제목</th>
                 <th>내용</th>
                 <th>조회수</th>
+                <th>작성일</th>
+                <th>수정일</th>
             </tr>
             </thead>
 
             <tbody>
             <tr th:each="post : ${posts}">
                 <td th:text="${post.postId}">1</td>
+
                 <td>
                     <a th:href="@{/posts/{postId}(postId=${post.postId})}"
                        th:text="${post.title}">
                         제목
                     </a>
                 </td>
+
                 <td th:text="${post.content}">내용</td>
+
                 <td th:text="${post.viewCount}">0</td>
+
+                <td th:text="${#temporals.format(post.createdAt, 'yyyy-MM-dd HH:mm')}">
+                    2026-05-11 12:00
+                </td>
+
+                <td th:text="${#temporals.format(post.updatedAt, 'yyyy-MM-dd HH:mm')}">
+                    2026-05-11 12:00
+                </td>
             </tr>
             </tbody>
         </table>

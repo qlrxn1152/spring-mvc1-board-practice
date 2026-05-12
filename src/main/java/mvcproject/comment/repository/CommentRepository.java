@@ -1,4 +1,4 @@
-package mvcproject.post.repository;
+package mvcproject.comment.repository;
 
 public interface CommentRepository {
 

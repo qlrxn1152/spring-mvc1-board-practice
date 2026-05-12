@@ -1,4 +1,4 @@
-package mvcproject.post.controller;
+package mvcproject.comment.controller;
 
 import org.springframework.stereotype.Controller;
 

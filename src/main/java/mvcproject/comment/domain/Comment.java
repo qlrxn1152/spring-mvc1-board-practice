@@ -1,4 +1,4 @@
-package mvcproject.post.domain;
+package mvcproject.comment.domain;
 
 import lombok.Getter;
 import lombok.ToString;

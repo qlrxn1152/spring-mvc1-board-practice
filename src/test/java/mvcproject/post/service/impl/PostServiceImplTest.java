@@ -4,14 +4,12 @@ import mvcproject.post.domain.Post;
 import mvcproject.post.repository.PostRepository;
 import mvcproject.post.repository.impl.PostRepositoryImpl;
 import mvcproject.post.service.PostService;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class PostServiceImplTest {
 

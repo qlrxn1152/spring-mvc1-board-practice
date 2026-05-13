@@ -2,6 +2,7 @@ package mvcproject.comment.domain;
 
 import lombok.Getter;
 import lombok.ToString;
+import mvcproject.post.domain.Post;
 
 import java.time.LocalDateTime;
 
@@ -19,6 +20,11 @@ public class Comment {
         this.postId = postId;
         this.content = content;
         this.createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
+    }
+
+    public void updateComment(Comment updateComment) {
+        this.content = updateComment.getContent();
         this.updatedAt = LocalDateTime.now();
     }
 
